@@ -18,10 +18,10 @@ class Profile extends Component {
       <div className="container">
         <div className="profile-area">
           <h1>{profile.name}</h1>
-          <div header="Profile">
+          <div>
             <img src={profile.picture} alt="profile" />
             <div>
-              <div><div glyph="user" /> Nickname</div></div>
+              <div><div/> Nickname</div></div>
               <h3>{profile.nickname}</h3>
               <h3>{profile.sub}</h3>
             </div>
