@@ -1,0 +1,35 @@
+* {
+  box-sizing: border-box; }
+
+body {
+  font-weight: normal;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  color: #F0F1EE;
+  background: #1352A2;
+  text-align: center;
+  position: relative;
+  height: 100%; }
+
+.visually-hidden {
+  /*https://developer.yahoo.com/blogs/ydn/clip-hidden-content-better-accessibility-53456.html*/
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden; }
+
+body:hover .visually-hidden a, body:hover .visually-hidden input, body:hover .visually-hidden button {
+  display: none !important; }
+
+a {
+  color: #333332;
+  text-decoration: none; }
+  a:hover {
+    color: #F97572; }
+
+/*# sourceMappingURL=main.css.map */
