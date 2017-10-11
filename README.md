@@ -9,12 +9,12 @@ This project is being updated. [View the wireframes here](https://github.com/bri
 
 * HTML5
 * CSS3 (SCSS)
-* JavaScript
+* JavaScript / jQuery
 * React
 * Redux
 * Node.js
 * Express.js
-* Passport
+* Auth0
 * MongoDB
 * Heroku
 * Affinity Designer, AdobeXD
