@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { ThemeProvider } from 'styled-components';
 import styled from 'styled-components';
 import colors from './Components/colors';
+import theme from './Components/theme';
 
 class App extends Component {
   goTo(route) {
@@ -24,18 +25,32 @@ class App extends Component {
     height: 80px;
     `;  
 
+    const Logo = styled.img`
+    height: 25px;
+    float: left;
+    `;  
+
+    const LogInButton = styled.button`
+    border: none;
+    background: transparent;
+    color: ${theme.offwhite};
+    float: right;
+    padding: 3px;
+    font-size: 20px;
+    `;
+
     return (
       <ThemeProvider theme={colors}>
         <div>
           <HomeNavigation>
             <div>
-              <img src="../imgs/logo.svg" alt="Code journal logo"></img>
+              <Logo src="../imgs/logo.svg" alt="Code journal logo"></Logo>
             </div>
             {
               !isAuthenticated() && (
-                  <button onClick={this.login.bind(this)}> 
+                  <LogInButton onClick={this.login.bind(this)}> 
                     Log In
-                  </button>
+                  </LogInButton>
                 )
             }
             {
