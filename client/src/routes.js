@@ -20,10 +20,10 @@ export const makeMainRoutes = () => {
     <Router history={history} component={App}>
       <div>
         <Route path="/" render={(props) => <App auth={auth} {...props} />} />
-        <Route path="/home" render={(props) => <Home auth={auth} {...props} />} />
+        <Route path="/" render={(props) => <Home auth={auth} {...props} />} />
         <Route path="/profile" render={(props) => (
           !auth.isAuthenticated() ? (
-            <Redirect to="/home"/>
+            <Redirect to="/"/>
           ) : (
             <Profile auth={auth} {...props} />
           )
