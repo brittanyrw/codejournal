@@ -24,7 +24,13 @@ class Footer extends Component {
         color: white;
         float: left;
         padding: 15px 0;
+        display: inline-block;
     `;    
+
+    const SocialIcons = styled.div`
+        display: inline-block;
+        float: right;
+    `; 
 
     const iconStyle = {
         color: 'white',
@@ -34,10 +40,10 @@ class Footer extends Component {
     return (
       <Footer>
         <FooterLink href="#">FAQ & Feedback</FooterLink>
-        <div>
-            <FontAwesome name="twitter" size="2x" style={iconStyle} />
-            <FontAwesome name="github-alt" size="2x" style={iconStyle} />
-        </div>
+        <SocialIcons>
+            <a href="http://twitter.com" target="_blank"><FontAwesome name="twitter" size="2x" style={iconStyle} /></a>
+            <a href="http://github.com" target="_blank"><FontAwesome name="github-alt" size="2x" style={iconStyle} /></a>
+        </SocialIcons>
       </Footer>
     );
   }
