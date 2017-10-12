@@ -37,6 +37,10 @@ class App extends Component {
     float: right;
     padding: 3px;
     font-size: 20px;
+    cursor: pointer;
+    &:hover {
+      color: ${theme.yellow};
+    }
     `;
 
     return (
