@@ -92,12 +92,12 @@ class Home extends Component {
                   <HomeHeader>
                     <HeaderText>Organize your learning with a personalized dashboard.</HeaderText>
                       <div>
-                        <a href="#feature-section"><FeatureButton>FEATURES</FeatureButton></a>
+                        <a href="#feature-section" className="homepage-link"><FeatureButton>FEATURES</FeatureButton></a>
                         <SignUpButton onClick={this.login.bind(this)}>SIGN UP</SignUpButton>
                       </div>
                     <HeaderImage src="http://via.placeholder.com/800x450"></HeaderImage>
                   </HomeHeader>
-                  <HomeFeatures>
+                  <HomeFeatures id="feature-section">
                     <h1>Features and Tools</h1>
                     <FeatureBox>
                       <FeatureImage src="http://via.placeholder.com/350x300"></FeatureImage>
