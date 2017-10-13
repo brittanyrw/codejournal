@@ -106,12 +106,12 @@ class Home extends Component {
                       <p>Organize your coding resources, tutorials, courses and projects in one central location.</p>
                     </FeatureBox>
                     <FeatureBox>
-                      <FeatureImage src="../imgs/home-page-lables.svg"></FeatureImage>
-                      <p>View your progress and stay motivated while you learn new subjects.</p>
+                    <FeatureImage src="../imgs/home-page-stats.svg"></FeatureImage>
+                      <p>Keep track of your Github, social media and project statistics in your dashboard.</p>                      
                     </FeatureBox>
                     <FeatureBox>
-                      <FeatureImage src="../imgs/home-page-stats.svg"></FeatureImage>
-                      <p>Keep track of your Github, social media and project statistics in your dashboard.</p>
+                      <FeatureImage src="../imgs/home-page-check.svg"></FeatureImage>
+                      <p>View your progress and stay motivated while you learn new subjects.</p>
                     </FeatureBox>            
                   </HomeFeatures>
                 </div>
