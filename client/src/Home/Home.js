@@ -70,12 +70,14 @@ class Home extends Component {
     `;        
 
     const FeatureBox = styled.div`
+      width: 250px;
+      margin: auto;
       @media only screen and (min-width: 641px) {
             display: inline-block;
             margin: 10px 20px;
         } 		
-    `;            
-
+    `;          
+    
     return (
       <div>
         <div className="container">
@@ -95,21 +97,21 @@ class Home extends Component {
                         <a href="#feature-section" className="homepage-link"><FeatureButton>FEATURES</FeatureButton></a>
                         <SignUpButton onClick={this.login.bind(this)}>SIGN UP</SignUpButton>
                       </div>
-                    <HeaderImage src="http://via.placeholder.com/800x450"></HeaderImage>
+                    <HeaderImage src="../imgs/home-image.svg"></HeaderImage>
                   </HomeHeader>
                   <HomeFeatures id="feature-section">
                     <h1>Features and Tools</h1>
                     <FeatureBox>
-                      <FeatureImage src="http://via.placeholder.com/350x300"></FeatureImage>
-                      <p>Short description of the feature.</p>
+                      <FeatureImage src="../imgs/home-page-square.svg"></FeatureImage>
+                      <p>Organize your coding resources, tutorials, courses and projects in one central location.</p>
                     </FeatureBox>
                     <FeatureBox>
-                      <FeatureImage src="http://via.placeholder.com/350x300"></FeatureImage>
-                      <p>Short description of the feature.</p>
+                      <FeatureImage src="../imgs/home-page-lables.svg"></FeatureImage>
+                      <p>View your progress and stay motivated while you learn new subjects.</p>
                     </FeatureBox>
                     <FeatureBox>
-                      <FeatureImage src="http://via.placeholder.com/350x300"></FeatureImage>
-                      <p>Short description of the feature.</p>
+                      <FeatureImage src="../imgs/home-page-stats.svg"></FeatureImage>
+                      <p>Keep track of your Github, social media and project statistics in your dashboard.</p>
                     </FeatureBox>            
                   </HomeFeatures>
                 </div>
