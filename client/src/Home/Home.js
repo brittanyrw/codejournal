@@ -70,7 +70,7 @@ class Home extends Component {
     `;        
 
     const FeatureBox = styled.div`
-      width: 250px;
+      width: 300px;
       margin: auto;
       @media only screen and (min-width: 641px) {
             display: inline-block;
