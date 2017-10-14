@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 import styled from 'styled-components';
 import colors from './Components/colors';
@@ -48,7 +49,9 @@ class App extends Component {
         <div>
           <HomeNavigation>
             <div>
-              <Logo src="../imgs/logo.svg" alt="Code journal logo"></Logo>
+              <Link to="/home">
+                <Logo src="../imgs/logo.svg" alt="Code journal logo"></Logo>
+              </Link>
             </div>
             {
               !isAuthenticated() && (
