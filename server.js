@@ -1,15 +1,12 @@
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
-const passport = require('passport');
 const flash    = require('connect-flash');
 const path   = require('path');
 const morgan       = require('morgan');
 const cookieParser = require('cookie-parser');
 const bodyParser   = require('body-parser');
 const session      = require('express-session');
-
-const Project = require('./api/models/project');
 
 require('dotenv').config();
 
@@ -22,7 +19,6 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 mongoose.connect(configDB.url);
-require('./api/config/passport')(passport);
 
 app.use(morgan('dev')); 
 app.use(cookieParser()); 
@@ -39,11 +35,9 @@ app.use(session({
     saveUninitialized: true 
 }));
 
-app.use(passport.initialize());
-app.use(passport.session()); 
 app.use(flash()); 
 
-require('./api/routes/routes.js')(app, passport); 
+require('./api/routes/routes.js')(app); 
 
 app.listen(app.get('port'), () => {
   console.log(`Find the server at: http://localhost:${app.get('port')}/`); 
