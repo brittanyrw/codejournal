@@ -21,17 +21,54 @@ class App extends Component {
   render() {
     const { isAuthenticated } = this.props.auth;
 
+    const DashNavigation = styled.div`
+    padding: 20px;
+    height: 80px;
+    text-align: center;  
+    background: ${theme.pink}; 
+      @media only screen and (min-width: 641px) {
+        transition: margin-left .5s;
+        margin-left: 100px;
+      }
+    `;  
+
     const HomeNavigation = styled.div`
     padding: 20px;
     height: 80px;
-    `;  
+    text-align: center;   
+    `;      
+
+    const NavigationLinks = styled.div`
+    display: none;
+    float: right;
+    padding: 0 10px;
+    @media only screen and (min-width: 641px) {
+      display: inline-block;
+    }
+    `;
+
+    const DashNavigationLogo = styled.div`
+    display: inline-block;
+    @media only screen and (min-width: 641px) {
+      transition: margin-left .5s;
+      margin-left: 100px;
+    }
+    `;
+
+    const NavigationLogo = styled.div`
+    display: inline-block;
+    `;
 
     const Logo = styled.img`
-    height: 25px;
-    float: left;
+      height: 30px;
+      margin: 0 auto;
+      padding: 0 50px;
+        @media only screen and (min-width: 641px) {
+          padding: 0;
+        }
     `;  
 
-    const LogInButton = styled.button`
+    const AccountButton = styled.button`
     border: none;
     background: transparent;
     color: ${theme.offwhite};
@@ -47,41 +84,94 @@ class App extends Component {
     return (
       <ThemeProvider theme={colors}>
         <div>
-          <HomeNavigation>
-            <div>
-              <Link to="/home">
-                <Logo src="../imgs/logo.svg" alt="Code journal logo"></Logo>
-              </Link>
+          { 
+            !isAuthenticated() && (
+              <div>
+                <HomeNavigation>
+                  <NavigationLogo>
+                    <Link to="/home">
+                      <Logo src="../imgs/logo.svg" alt="Code journal logo"></Logo>
+                    </Link>
+                  </NavigationLogo>
+                  <NavigationLinks>
+                  {
+                    !isAuthenticated() && (
+                        <AccountButton onClick={this.login.bind(this)}> 
+                          Log In
+                        </AccountButton>
+                      )
+                  }
+                  {
+                    isAuthenticated() && (
+                        <AccountButton
+                          onClick={this.goTo.bind(this, 'profile')}
+                        >
+                          Profile
+                        </AccountButton>
+                      )
+                  }
+                  {
+                    isAuthenticated() && (
+                        <AccountButton
+                          onClick={this.logout.bind(this)}
+                        >
+                          Log Out
+                        </AccountButton>
+                      )
+                  }
+                  </NavigationLinks>
+                </HomeNavigation>
+
+                <div className="container">
+                  {this.props.children}
+                </div>
+              </div>
+            )
+          }
+          { 
+            isAuthenticated() && (
+              <div>
+              <DashNavigation>
+                <DashNavigationLogo>
+                  <Link to="/home">
+                    <Logo src="../imgs/logo.svg" alt="Code journal logo"></Logo>
+                  </Link>
+                </DashNavigationLogo>
+                <NavigationLinks>
+                {
+                  !isAuthenticated() && (
+                      <AccountButton onClick={this.login.bind(this)}> 
+                        Log In
+                      </AccountButton>
+                    )
+                }
+                {
+                  isAuthenticated() && (
+                      <AccountButton
+                        onClick={this.goTo.bind(this, 'profile')}
+                      >
+                        Profile
+                      </AccountButton>
+                    )
+                }
+                {
+                  isAuthenticated() && (
+                      <AccountButton
+                        onClick={this.logout.bind(this)}
+                      >
+                        Log Out
+                      </AccountButton>
+                    )
+                }
+                </NavigationLinks>
+              </DashNavigation>
+
+              <div className="container">
+                {this.props.children}
+              </div>
             </div>
-            {
-              !isAuthenticated() && (
-                  <LogInButton onClick={this.login.bind(this)}> 
-                    Log In
-                  </LogInButton>
-                )
-            }
-            {
-              isAuthenticated() && (
-                  <button
-                    onClick={this.goTo.bind(this, 'profile')}
-                  >
-                    Profile
-                  </button>
-                )
-            }
-            {
-              isAuthenticated() && (
-                  <button
-                    onClick={this.logout.bind(this)}
-                  >
-                    Log Out
-                  </button>
-                )
-            }
-          </HomeNavigation>
-          <div className="container">
-            {this.props.children}
-          </div>
+            )
+          }
         </div>
       </ThemeProvider>
     );
