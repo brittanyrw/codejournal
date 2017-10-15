@@ -24,7 +24,7 @@ class Home extends Component {
       margin: 20px 0 0 0;
       border-radius: 5px 5px 0 0;
       width: 90%;
-      max-width: 700px;
+      max-width: 1000px;
     `;
 
     const HeaderText = styled.h1`
@@ -80,12 +80,12 @@ class Home extends Component {
     
     return (
       <div>
-        <div className="container">
+        <div>
           {
             isAuthenticated() && (
-                <h4>
+                <div>
                   <Dashboard></Dashboard>
-                </h4>
+                </div>
               )
           }
           {
@@ -114,11 +114,11 @@ class Home extends Component {
                       <p>View your progress and stay motivated while you learn new subjects.</p>
                     </FeatureBox>            
                   </HomeFeatures>
+                  <Footer></Footer>
                 </div>
               )
           }
         </div>
-        <Footer></Footer>
       </div>
     );
   }
