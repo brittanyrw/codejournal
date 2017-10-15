@@ -39,12 +39,9 @@ class App extends Component {
     `;      
 
     const NavigationLinks = styled.div`
-    display: none;
+    display: inline-block;
     float: right;
     padding: 0 10px;
-    @media only screen and (min-width: 641px) {
-      display: inline-block;
-    }
     `;
 
     const DashNavigationLogo = styled.div`
@@ -60,11 +57,13 @@ class App extends Component {
     `;
 
     const Logo = styled.img`
-      height: 30px;
+      height: 20px;
       margin: 0 auto;
       padding: 0 50px;
         @media only screen and (min-width: 641px) {
           padding: 0;
+          height: 30px;
+          transition: 1s;
         }
     `;  
 
@@ -145,7 +144,7 @@ class App extends Component {
                       </AccountButton>
                     )
                 }
-                {
+                {/* {
                   isAuthenticated() && (
                       <AccountButton
                         onClick={this.goTo.bind(this, 'profile')}
@@ -153,7 +152,7 @@ class App extends Component {
                         Profile
                       </AccountButton>
                     )
-                }
+                } */}
                 {
                   isAuthenticated() && (
                       <AccountButton
