@@ -18,6 +18,7 @@ class DashNavigation extends Component {
         }));
       }
 
+      
   render() {
 
     const SideNavigation = styled.nav`
@@ -34,7 +35,7 @@ class DashNavigation extends Component {
       width: 100px;
       left: 0;
       text-align: center;
-      padding-top: 100px;
+      padding-top: 70px;
     }
   `;   
 
@@ -90,12 +91,12 @@ class DashNavigation extends Component {
                         Dashboard
                     </DashboardLink>
                     </NavigationListItem>
-                    <NavigationListItem>
+                    {/* <NavigationListItem>
                     <DashboardLink to="/settings" className="dashboard-navigation-link"> 
                         <FontAwesome className="icons" name="cog" size="2x" />
                         Settings
                     </DashboardLink>
-                    </NavigationListItem>
+                    </NavigationListItem> */}
                     <NavigationListItem>
                     <DashboardLink to="/projects" className="dashboard-navigation-link">
                         <FontAwesome className="icons" name="bookmark" size="2x" />
@@ -124,11 +125,6 @@ class DashNavigation extends Component {
                     <DashboardLink to="/resources" className="dashboard-navigation-link">
                         <FontAwesome className="icons" name="sticky-note" size="2x" />
                         Resources
-                    </DashboardLink>
-                    </NavigationListItem> 
-                    <NavigationListItem>
-                    <DashboardLink to="/logout" className="dashboard-navigation-link">
-                        Log Out
                     </DashboardLink>
                     </NavigationListItem>                
                 </NavigationList>        
