@@ -16,6 +16,14 @@ class Support extends Component {
         font-weight: 300;
     `;
 
+    const HeaderImage = styled.img`
+        margin: 20px auto;
+        border-radius: 5px 5px 0 0;
+        width: 100%;
+        max-width: 800px;
+        height: 200px;
+    `;
+
     const SupportSection = styled.section`
         background-color: ${theme.offwhite};
         border-radius: 5px;
@@ -31,6 +39,7 @@ class Support extends Component {
         <SupportBody>
             <section>
                 <HeaderText>Code Journal Help</HeaderText>
+                <HeaderImage src="http://via.placeholder.com/250x150"></HeaderImage>
             </section>
             <SupportSection>
                 <h2>About Code Journal</h2>
