@@ -23,6 +23,7 @@ const handleAuthentication = (nextState, replace) => {
 }
 
 export const makeMainRoutes = () => {
+  // TO DO: Clean up react router routes. 
   return (
     <Router history={history} component={App}>
       <div>
@@ -48,6 +49,8 @@ export const makeMainRoutes = () => {
           <Route path="/tutorials" render={(props) => (
             !auth.isAuthenticated() ? ( <Redirect to="/home"/> ) : ( <Tutorials auth={auth} {...props} /> ))} /> 
 
+          <Route path="/projects" render={(props) => (
+            !auth.isAuthenticated() ? ( <Redirect to="/home"/> ) : ( <Projects auth={auth} {...props} /> ))} /> 
 
           <Route path="/events" render={(props) => (
             !auth.isAuthenticated() ? ( <Redirect to="/home"/> ) : ( <Events auth={auth} {...props} /> ))} /> 
