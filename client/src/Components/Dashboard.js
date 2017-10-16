@@ -4,7 +4,7 @@ import theme from './colors';
 
 import DashNavigation from './DashNavigation';
 import DashFooter from './DashFooter';
-import DashElements from './DashElements';
+import DashStats from './DashStats';
 import DashSquare from './DashSquare';
 
 class Dashboard extends Component {
@@ -26,7 +26,7 @@ class Dashboard extends Component {
       <DashContainer>
         <DashNavigation></DashNavigation>
         <div>
-          <DashElements></DashElements>
+          <DashStats></DashStats>
         </div>
         <div>
           <DashSquare type="project"></DashSquare>
