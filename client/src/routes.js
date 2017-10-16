@@ -10,6 +10,7 @@ import Tutorials from './Components/Tutorials';
 import Events from './Components/Events';
 import Resources from './Components/Resources';
 import DashSupport from './Components/DashSupport';
+import Upcoming from './Components/Upcoming';
 import Profile from './Profile/Profile';
 import Callback from './Callback/Callback';
 import Auth from './Auth/Auth';
@@ -51,6 +52,9 @@ export const makeMainRoutes = () => {
 
           <Route path="/dashboard-support" render={(props) => (
             !auth.isAuthenticated() ? ( <Redirect to="/home"/> ) : ( <DashSupport auth={auth} {...props} /> ))} /> 
+
+          <Route path="/upcoming" render={(props) => (
+            !auth.isAuthenticated() ? ( <Redirect to="/home"/> ) : ( <Upcoming auth={auth} {...props} /> ))} />
 
           <Route path="/tutorials" render={(props) => (
             !auth.isAuthenticated() ? ( <Redirect to="/home"/> ) : ( <Tutorials auth={auth} {...props} /> ))} /> 
