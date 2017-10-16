@@ -4,17 +4,28 @@ import theme from './colors';
 import FontAwesome from 'react-fontawesome';
 import { Link } from 'react-router-dom';
 
+import DashNavigation from './DashNavigation';
+import DashFooter from './DashFooter';
+
 class Resources extends Component {
 
   render() {
 
-    const Div = styled.div`
-
-    `;
-
+    const DashContainer = styled.section`
+    background: white;
+    height: 1000px;
+    @media only screen and (min-width: 641px) {
+      transition: margin-left .5s;
+      margin-left: 100px;
+    }
+  `;
 
     return (
-      <div>Resources</div>
+      <DashContainer>
+        <DashNavigation></DashNavigation>
+        <div>Resources</div>
+        <DashFooter></DashFooter>
+    </DashContainer>
     );
   }
 }
