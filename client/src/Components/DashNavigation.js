@@ -105,7 +105,7 @@ class DashNavigation extends Component {
                     </NavigationListItem>
                     <NavigationListItem>
                     <DashboardLink to="/tutorials" className="dashboard-navigation-link">
-                        <FontAwesome className="icons" name="code" size="2x" />
+                        <FontAwesome className="sticky-note" name="code" size="2x" />
                         Tutorials
                     </DashboardLink>
                     </NavigationListItem> 
@@ -123,10 +123,16 @@ class DashNavigation extends Component {
                     </NavigationListItem>
                     <NavigationListItem>
                     <DashboardLink to="/resources" className="dashboard-navigation-link">
-                        <FontAwesome className="icons" name="sticky-note" size="2x" />
+                        <FontAwesome className="icons" name="folder" size="2x" />
                         Resources
                     </DashboardLink>
-                    </NavigationListItem>                
+                    </NavigationListItem> 
+                    <NavigationListItem>
+                    <DashboardLink to="/upcoming" className="dashboard-navigation-link">
+                        <FontAwesome className="icons" name="code" size="2x" />
+                        Upcoming
+                    </DashboardLink>
+                    </NavigationListItem>                               
                 </NavigationList>        
         </SideNavigation>
        </div>
