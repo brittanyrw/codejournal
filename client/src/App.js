@@ -39,9 +39,11 @@ class App extends Component {
     `;      
 
     const NavigationLinks = styled.div`
-    display: inline-block;
-    float: right;
-    padding: 0 10px;
+      display: inline-block;
+      padding: 0 10px;
+        @media only screen and (min-width: 641px) {
+          float: right;
+        }
     `;
 
     const DashNavigationLogo = styled.div`
