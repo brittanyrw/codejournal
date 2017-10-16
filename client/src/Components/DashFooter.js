@@ -43,7 +43,7 @@ class DashFooter extends Component {
     return (
       <DashFooter>
         <div>
-            <FooterLink to="/support">FAQ & Feedback</FooterLink>
+            <FooterLink to="/dashboard-support">FAQ & Feedback</FooterLink>
         </div>
         <SocialIcons>
             <a href="http://twitter.com" target="_blank"><FontAwesome name="twitter" size="2x" style={iconStyle} /></a>
