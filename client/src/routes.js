@@ -9,6 +9,7 @@ import Projects from './Components/Projects';
 import Tutorials from './Components/Tutorials';
 import Events from './Components/Events';
 import Resources from './Components/Resources';
+import DashSupport from './Components/DashSupport';
 import Profile from './Profile/Profile';
 import Callback from './Callback/Callback';
 import Auth from './Auth/Auth';
@@ -22,10 +23,12 @@ const handleAuthentication = (nextState, replace) => {
   }
 }
 
+// TO DO: When link is clicked, page needs to scroll to the top. Example - clicking on FAQ & Support while logged in as a user on the dashboard.
+
 export const makeMainRoutes = () => {
   // TO DO: Clean up react router routes. 
   return (
-    <Router history={history} component={App}>
+    <Router history={history} component={App} >
       <div>
           <Route path="/" render={(props) => <App auth={auth} {...props} />} />
           <Route path="/home" render={(props) => <Home auth={auth} {...props} />} />
@@ -45,6 +48,9 @@ export const makeMainRoutes = () => {
 
           <Route path="/courses" render={(props) => (
             !auth.isAuthenticated() ? ( <Redirect to="/home"/> ) : ( <Courses auth={auth} {...props} /> ))} /> 
+
+          <Route path="/dashboard-support" render={(props) => (
+            !auth.isAuthenticated() ? ( <Redirect to="/home"/> ) : ( <DashSupport auth={auth} {...props} /> ))} /> 
 
           <Route path="/tutorials" render={(props) => (
             !auth.isAuthenticated() ? ( <Redirect to="/home"/> ) : ( <Tutorials auth={auth} {...props} /> ))} /> 
