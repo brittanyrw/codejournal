@@ -21,36 +21,43 @@ class Upcoming extends Component {
 
     const FeaturesWrapper = styled.section`
       padding: 20px;
+      color: ${theme.black};
     `;
 
     const FeatureSquare = styled.div`
-
-    `;
-
-    const FeatureSquareTitle = styled.h1`
-
-    `;    
-
-    const CuratedSquare = styled(FeatureSquare)`
-      
-    `;
+        border-radius: 5px;
+        height: 300px;
+        width: 300px;
+        margin: 10px;
+        display: inline-block;
+        vertical-align: top;
+        padding: 10px;
+        border: 2px solid ${theme.offwhite};
+        color: ${theme.gray};
+        &:hover {
+          color:  ${theme.black};
+          border: 2px solid ${theme.black};
+        }
+    `;  
 
 
     return (
       <DashContainer>
         <DashNavigation></DashNavigation>
         <FeaturesWrapper>
-          <CuratedSquare>
-            <FeatureSquareTitle>Curated Squares</FeatureSquareTitle>
-          </CuratedSquare>                    
+          <h1>Upcoming Features</h1>
+          <p>Stay tuned for updates and additional features. The list below includes features in the pipeline for development.</p>
           <FeatureSquare>
-            <FeatureSquareTitle>Notifications</FeatureSquareTitle>
+            <h2>Curated Squares</h2>
+          </FeatureSquare>                    
+          <FeatureSquare>
+            <h2>Notifications</h2>
           </FeatureSquare>
           <FeatureSquare>
-            <FeatureSquareTitle>Social Media Connections</FeatureSquareTitle>
+            <h2>Social Media Connections</h2>
           </FeatureSquare>
           <FeatureSquare>
-            <FeatureSquareTitle>Share Dashboards</FeatureSquareTitle>
+            <h2>Share Dashboards</h2>
           </FeatureSquare>                    
         </FeaturesWrapper>
         <DashFooter></DashFooter>
