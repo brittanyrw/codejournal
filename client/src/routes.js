@@ -11,6 +11,7 @@ import Events from './Components/Events';
 import Resources from './Components/Resources';
 import DashSupport from './Components/DashSupport';
 import Upcoming from './Components/Upcoming';
+import AddItemForm from './Components/AddItemForm';
 import Profile from './Profile/Profile';
 import Callback from './Callback/Callback';
 import Auth from './Auth/Auth';
@@ -43,7 +44,10 @@ export const makeMainRoutes = () => {
           )} />
           <Route path="/dashboard" render={(props) => (
             !auth.isAuthenticated() ? ( <Redirect to="/home"/> ) : ( <Dashboard auth={auth} {...props} /> ))} />
-          
+            
+          <Route path="/additem" render={(props) => (
+              !auth.isAuthenticated() ? ( <Redirect to="/home"/> ) : ( <AddItemForm auth={auth} {...props} /> ))} />           
+
           <Route path="/resources" render={(props) => (
             !auth.isAuthenticated() ? ( <Redirect to="/home"/> ) : ( <Resources auth={auth} {...props} /> ))} />          
 
