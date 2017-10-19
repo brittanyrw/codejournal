@@ -26,7 +26,7 @@ class Upcoming extends Component {
 
     const FeatureSquare = styled.div`
         border-radius: 5px;
-        height: 300px;
+        height: 200px;
         width: 300px;
         margin: 10px;
         display: inline-block;
@@ -49,15 +49,19 @@ class Upcoming extends Component {
           <p>Stay tuned for updates and additional features. The list below includes features in the pipeline for development.</p>
           <FeatureSquare>
             <h2>Curated Squares</h2>
+            <p>Pre-made subject squares of top rated resources, project suggestions and courses that you can import into your dashboard.</p>
           </FeatureSquare>                    
           <FeatureSquare>
             <h2>Notifications</h2>
+            <p>Recieve reminders for uncompleted dashboard items and upcoming events.</p>            
           </FeatureSquare>
           <FeatureSquare>
             <h2>Social Media Connections</h2>
+            <p>Connect to Twitter, Github and more to monitor your coding progress.</p>            
           </FeatureSquare>
           <FeatureSquare>
             <h2>Share Dashboards</h2>
+            <p>Share your dashboard or individual squares with other users.</p>            
           </FeatureSquare>                    
         </FeaturesWrapper>
         <DashFooter></DashFooter>
